@@ -26,6 +26,17 @@ void Util::checkBtnKeyboard(Controller *controller, WORD btn, WORD keyCode) {
     }
 }
 
+void Util::checkBtnKeyboardCombination(Controller *controller, WORD btn, WORD keyCode1, WORD keyCode2) {
+    if (hasBtnChanged(controller, btn) && controller->isPressed(btn)) {
+        Sender::sendKeyboardKey(keyCode1, false);
+        Sender::sendKeyboardKey(keyCode2, false);
+    }
+    if (hasBtnChanged(controller, btn) && !controller->isPressed(btn)) {
+        Sender::sendKeyboardKey(keyCode1, true);
+        Sender::sendKeyboardKey(keyCode2, true);
+    }
+}
+
 bool Util::hasBtnChanged(Controller *controller, WORD btn) {
     if (isFirst) {
         isFirst = false;

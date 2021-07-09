@@ -17,6 +17,8 @@ public:
 
     static void checkBtnKeyboard(Controller *controller, WORD btn, WORD keyCode);
 
+    static void checkBtnKeyboardCombination(Controller *controller, WORD btn, WORD keyCode1, WORD keyCode2);
+
     static bool checkBtnCombination(Controller *controller, WORD btn1, WORD btn2);
 
     static bool checkBtnCombination(Controller *controller, WORD btn1, WORD btn2, WORD btn3);

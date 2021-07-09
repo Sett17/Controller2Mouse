@@ -11,3 +11,6 @@ Mapping:
 | Right Stick in | Right Click      |
 |                |                  |
 | A              | Left Click, hold |
+|                |                  |
+| DPad Left      | Backspace, click |
+| DPad down      | media play/pause |
